@@ -1,5 +1,6 @@
 li{
-font-family:Burbank big condensed ; 
+font-family: monospace;
+font-weight: bold; 
 font-size: 40px;
 
 text-align: center;
@@ -20,6 +21,6 @@ text-align: center;
 img{
     display: block;
     margin: 0 auto;
-    width: 350px;
+    width: 340px;
     height: auto;
 }
