@@ -13,6 +13,11 @@ margin-right: auto;
 
 }
 .phone-screen{
+    background-image: url('27612.jpg'); /* Put your image in the folder */
+    background-size: cover;      /* Makes sure it fills the screen without stretching */
+     background-position: center; /* Keeps the best part of the image in the middle */
+    background-repeat: no-repeat;/* Stops it from tiling like crazy */
+    background-color: #f7f9fc;   /* Fallback color if the image doesn't load */
     width: 100%;
     max-width: 390px;
     min-height: 844px;
@@ -48,6 +53,7 @@ textarea{
   border-radius: 8px;
    outline: none;
   transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 textarea::placeholder{
      color: #9ca3af;
@@ -123,6 +129,7 @@ textarea:hover:not(:focus){
     padding: 15px;
     text-align: left;
     box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.1);
+    
 }
 
 .note-card p {
@@ -171,4 +178,3 @@ textarea:hover:not(:focus){
 body, button, textarea, h2, p, .menu, .note-card {
     font-family: 'SummaryNotes' ;
 }
- 

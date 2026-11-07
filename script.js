@@ -45,7 +45,7 @@ btnBack.addEventListener('click', goHome);
 
 // 6. DRAW THE NOTES ON THE SCREEN
 function renderNotes() {
-    notesList.innerHTML = ''; // Clear the list first
+    notesList.innerHTML = ''; 
     
     notes.forEach((note, index) => {
         // Create a box for each note
