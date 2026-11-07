@@ -3,26 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>The Oasis</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="phone-screen">
+    <!-- HOME SCREEN -->
+    <div id="home-screen" class="phone-screen">
         <header>
             <img src="logo.png" alt="Logo">
             <nav>
-                
-                    <button class="menu">Home</button>
-                   <button class="menu">Notes</button>
-                    <button class="menu">Settings</button>
-                
-    </nav>
-</header>
-<body>
-    <textarea placeholder="type what's on your mind..." cols="43" rows="10"></textarea>
-    <button class="save-btn"><span>💾</span>save changes</button>
-    
-    
+                <button id="btn-home" class="menu">Home</button>
+                <button id="btn-notes" class="menu">Notes</button>
+                <button class="menu">Settings</button>
+            </nav>
+        </header>
+        
+        <textarea id="note-input" placeholder="type what's on your mind..." cols="43" rows="10"></textarea>
+        <button id="btn-save" class="save-btn"><span>💾</span> save changes</button>
+    </div>
+
+    <!-- NOTES SCREEN (Hidden by default) -->
+    <div id="notes-screen" class="phone-screen" style="display: none;">
+        <h2>Your Notes</h2>
+        
+        <!-- This is where the notes will appear -->
+        <div id="notes-list"></div>
+        
+        <button id="btn-back" class="menu">Back to Home</button>
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
 </body>
-</div>
 </html>
