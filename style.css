@@ -1,180 +1,218 @@
-.menu{
-font-family: SummaryNotes;
-font-weight: bold; 
-font-size: 40px;
-border: 4px solid #000000;
-padding: 10px;
-border-radius: 18px;
-margin: 10px;
-display:block;
-text-align: center;
-margin-left: auto;
-margin-right: auto;
-
+/* 1. Global Reset & Fonts */
+/* Fix the header layout */
+/* Fix the header layout */
+header {
+    display:block;
+    flex-direction: column;
+    align-items: center; /* Centers everything inside the header */
+    width: 100%;
 }
-.phone-screen{
-    background-image: url('27612.jpg'); /* Put your image in the folder */
-    background-size: cover;      /* Makes sure it fills the screen without stretching */
-     background-position: center; /* Keeps the best part of the image in the middle */
-    background-repeat: no-repeat;/* Stops it from tiling like crazy */
-    background-color: #f7f9fc;   /* Fallback color if the image doesn't load */
+
+/* Fix the logo specifically */
+header img {
+    display: block;
+    width: 65%; /* Makes it a nice size, not too big, not too small */
+    max-width: 250px; 
+    margin: 30px auto 20px auto; /* 30px from the top edge, centered horizontally */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif; /* Clean, modern text */
+    color: #333;
+    background-color: #f0f0f0; /* Fallback */
+}
+
+h1, h2, h3, .logo-text {
+    font-family: 'Cormorant Garamond', serif; /* Elegant, fancy titles */
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* 2. The Phone Screen (Clean & Minimal) */
+.phone-screen {
     width: 100%;
     max-width: 390px;
     min-height: 844px;
-    border: 10px solid #111111;
     border-radius: 40px;
-    margin:  auto;
-    background-color: #f7f9fc;
-    box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    box-sizing: border-box;
+    margin: auto;
+    /* Remove the thick black border */
+    border: 1px solid rgba(255, 255, 255, 0.5); 
+    background-color: transparent; /* Let your wavy bg show through! */
+    padding: 30px 20px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1); /* Soft, premium shadow */
     overflow-y: auto;
-}
-img {
-    display: block; /* Changed from inline-block for better centering */
-    margin: 0 auto;
-    width: 85%; /* Let it scale perfectly inside the 390px box */
-    max-width: 340px; /* But never get bigger than 340px */
-    height: auto;
-}
-textarea{
-  width: 100%;
-  box-sizing: border-box;
-  font-family:  SummaryNotes;
-  font-size: 1rem;
-  line-height: 1.5;
-   min-height: 4.5lh; /* Exactly 3 lines of text high initially */
-  field-sizing: content; /* Automatically grows as the user types (No JS needed!) */
-  resize: vertical;
-   padding: 0.75rem 1rem;
-  background-color: #fcfcfd;
-  color: #1f2937;
-  border: 1px solid #d1d5db;
-  border-radius: 8px;
-   outline: none;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-}
-textarea::placeholder{
-     color: #9ca3af;
-  opacity: 1;
-}
-textarea:focus{
-   background-color: #ffffff;
-  border-color: #6366f1; /* Premium Indigo */
-  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.12); /* Soft, blurry focus ring */
-}
-textarea:hover:not(:focus){
-    border-color: #9ca3af;
-}
-.save-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  
-  /* Matches the background and layout styles of your menu buttons */
-  background-color: #ffffff;   
-  color: #1a1a1a;              
-  
-  /* Font properties */
-  font-family: 'SummaryNotes', sans-serif; /* Your specific font */
-  font-size: 1.2rem;
-  text-transform: capitalize;  /* Ensures clean casing like "Save Changes" */
-  
-  /* Borders and Corner Shapes */
-  padding: 10px 24px;
-  border: 4px solid #000000;   /* Thick black border matching your menu layout */
-  border-radius: 20px;         /* Creates the same pill/rounded rectangle shape */
-  
-  /* Removes the block shadow entirely for a clean look */
-  box-shadow: none;            
-  cursor: pointer;
-  transition: background-color 0.2s ease, transform 0.1s ease;
-  font-weight: bold; /* Bold text for emphasis */
-  margin-top: 20px; /* Adds spacing above the button */
-  margin-left: 60px; /* Adds spacing to the left of the button */
+    background-image: url('27612.jpg'); /* Put your image in the folder */
+    background-size: cover;      /* Makes sure it fills the screen without stretching */
+    background-position: center; /* Keeps the best part of the image in the middle */
+    background-repeat: no-repeat;/* Stops it from tiling like crazy */
+    background-color: #f7f9fc;   /* Fallback color if the image doesn't load */
 }
 
-.menu:hover, .save-btn:hover {
-  background-color: #f0f0f0; /* Slightly lighter background on hover */
-  transform: translateY(-2px); /* Subtle lift effect */
+/* 3. The Menu Buttons (Sleek & Minimal) */
+.menu {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #444;
+    
+    /* Glass effect */
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 12px; /* Softer corners */
+    
+    padding: 15px 20px;
+    margin: 10px auto;
+    display: block;
+    width: 80%;
+    max-width: 250px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
 }
-/* Notes Page Styling */
-#notes-screen {
+
+.menu:hover {
+    background: rgba(255, 255, 255, 0.6);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+}
+
+/* 4. Textarea (Frosted Glass Input) */
+textarea {
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.6;
     padding: 20px;
-    text-align: center;
+    
+    /* Glass effect */
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 16px;
+    
+    color: #222;
+    outline: none;
+    resize: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
 }
 
+textarea::placeholder {
+    color: #888;
+    font-style: italic;
+}
+
+textarea:focus {
+    background: rgba(255, 255, 255, 0.7);
+    border-color: #d4af37; /* Subtle Gold border on focus! Very bougie */
+    box-shadow: 0 4px 20px rgba(212, 175, 55, 0.15);
+}
+
+/* 5. Save Button (Elegant) */
+.save-btn {
+    display: block;
+    width: fit-content;
+    margin: 20px auto 0 auto;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #333;
+    
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 30px; /* Pill shape */
+    padding: 12px 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.save-btn:hover {
+    background: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+/* 6. Notes Cards (Frosted Glass) */
 #notes-screen h2 {
-    font-family: SummaryNotes;
-    font-size: 32px;
-    color: #2a7f8f; /* Matches your OASIS teal color */
-    margin-bottom: 20px;
+    text-align: center;
+    font-size: 36px;
+    color: #222;
+    margin-bottom: 30px;
 }
 
 #notes-list {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    margin-bottom: 20px;
-    max-height: 400px;
-    overflow-y: auto;
 }
 
 .note-card {
-    background: #f5f5f5;
-    border: 3px solid #000;
-    border-radius: 15px;
-    padding: 15px;
-    text-align: left;
-    box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.1);
-    
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
 }
 
 .note-card p {
-    font-family: SummaryNotes;
-    font-size: 18px;
-    margin: 0 0 10px 0;
-    word-wrap: break-word;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    color: #333;
+    margin-bottom: 15px;
 }
 
 .note-card button {
-    background: #ff4444;
-    color: white;
-    border: 2px solid #000;
-    border-radius: 10px;
-    padding: 5px 15px;
-    font-family: SummaryNotes;
-    font-size: 14px;
+    background: transparent;
+    border: none;
+    color: #999;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
     cursor: pointer;
     float: right;
+    transition: color 0.3s;
 }
 
 .note-card button:hover {
-    background: #cc0000;
+    color: #d9534f; /* Soft red */
 }
 
 #btn-back {
-    background: #f5f5f5;
-    border: 3px solid #000;
-    border-radius: 15px;
-    padding: 10px 30px;
-    font-family: 'SummaryNotes';
-    font-size: 20px;
+    display: block;
+    width: fit-content;
+    margin: 30px auto 0 auto;
+    background: transparent;
+    border: 1px solid #ccc;
+    color: #555;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    padding: 10px 25px;
+    border-radius: 30px;
     cursor: pointer;
-    margin-top: 10px;
+    transition: all 0.3s;
 }
 
 #btn-back:hover {
-    background: #e0e0e0;
-}
-@font-face {
-    font-family: 'SummaryNotes';
-    src: url('fonts/SummaryNotesRegular-Ea5ln.ttf') format('truetype'); ;
-    font-weight: normal;
-    font-style: normal;
-}
-body, button, textarea, h2, p, .menu, .note-card {
-    font-family: 'SummaryNotes' ;
+    background: #fff;
+    border-color: #999;
 }
