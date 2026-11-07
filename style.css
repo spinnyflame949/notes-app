@@ -1,9 +1,16 @@
-li{
-font-family: monospace;
+.menu{
+font-family: summary notes;
 font-weight: bold; 
 font-size: 40px;
-
+border: 4px solid #000000;
+padding: 10px;
+border-radius: 18px;
+margin: 10px;
+display:block;
 text-align: center;
+margin-left: auto;
+margin-right: auto;
+
 }
 .phone-screen{
     width: 100%;
@@ -11,7 +18,7 @@ text-align: center;
     min-height: 844px;
     border: 10px solid #111111;
     border-radius: 40px;
-    margin: auto;
+    margin:  auto;
     background-color: #f7f9fc;
     box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.5);
     padding: 20px;
@@ -19,8 +26,70 @@ text-align: center;
     overflow-y: auto;
 }
 img{
-    display: block;
+    display: inline-block;
     margin: 0 auto;
     width: 340px;
     height: auto;
+}
+textarea{
+  width: 100%;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+   min-height: 4.5lh; /* Exactly 3 lines of text high initially */
+  field-sizing: content; /* Automatically grows as the user types (No JS needed!) */
+  resize: vertical;
+   padding: 0.75rem 1rem;
+  background-color: #fcfcfd;
+  color: #1f2937;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+   outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+textarea::placeholder{
+     color: #9ca3af;
+  opacity: 1;
+}
+textarea:focus{
+   background-color: #ffffff;
+  border-color: #6366f1; /* Premium Indigo */
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.12); /* Soft, blurry focus ring */
+}
+textarea:hover:not(:focus){
+    border-color: #9ca3af;
+}
+.save-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  
+  /* Matches the background and layout styles of your menu buttons */
+  background-color: #ffffff;   
+  color: #1a1a1a;              
+  
+  /* Font properties */
+  font-family: 'Summary Notes', sans-serif; /* Your specific font */
+  font-size: 1.2rem;
+  text-transform: capitalize;  /* Ensures clean casing like "Save Changes" */
+  
+  /* Borders and Corner Shapes */
+  padding: 10px 24px;
+  border: 4px solid #000000;   /* Thick black border matching your menu layout */
+  border-radius: 20px;         /* Creates the same pill/rounded rectangle shape */
+  
+  /* Removes the block shadow entirely for a clean look */
+  box-shadow: none;            
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  font-weight: bold; /* Bold text for emphasis */
+  margin-top: 20px; /* Adds spacing above the button */
+  margin-left: 60px; /* Adds spacing to the left of the button */
+}
+
+.menu:hover, .save-btn:hover {
+  background-color: #f0f0f0; /* Slightly lighter background on hover */
+  transform: translateY(-2px); /* Subtle lift effect */
 }
