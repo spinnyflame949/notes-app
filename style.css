@@ -25,10 +25,11 @@ margin-right: auto;
     box-sizing: border-box;
     overflow-y: auto;
 }
-img{
-    display: inline-block;
+img {
+    display: block; /* Changed from inline-block for better centering */
     margin: 0 auto;
-    width: 340px;
+    width: 85%; /* Let it scale perfectly inside the 390px box */
+    max-width: 340px; /* But never get bigger than 340px */
     height: auto;
 }
 textarea{
@@ -170,3 +171,4 @@ textarea:hover:not(:focus){
 body, button, textarea, h2, p, .menu, .note-card {
     font-family: 'SummaryNotes' ;
 }
+ 
