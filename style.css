@@ -1,5 +1,5 @@
 .menu{
-font-family: summary notes;
+font-family: SummaryNotes;
 font-weight: bold; 
 font-size: 40px;
 border: 4px solid #000000;
@@ -34,7 +34,7 @@ img{
 textarea{
   width: 100%;
   box-sizing: border-box;
-  font-family: summary notes;
+  font-family:  SummaryNotes;
   font-size: 1rem;
   line-height: 1.5;
    min-height: 4.5lh; /* Exactly 3 lines of text high initially */
@@ -71,7 +71,7 @@ textarea:hover:not(:focus){
   color: #1a1a1a;              
   
   /* Font properties */
-  font-family: 'Summary Notes', sans-serif; /* Your specific font */
+  font-family: 'SummaryNotes', sans-serif; /* Your specific font */
   font-size: 1.2rem;
   text-transform: capitalize;  /* Ensures clean casing like "Save Changes" */
   
@@ -100,7 +100,7 @@ textarea:hover:not(:focus){
 }
 
 #notes-screen h2 {
-    font-family: summary notes;
+    font-family: SummaryNotes;
     font-size: 32px;
     color: #2a7f8f; /* Matches your OASIS teal color */
     margin-bottom: 20px;
@@ -125,7 +125,7 @@ textarea:hover:not(:focus){
 }
 
 .note-card p {
-    font-family: summary notes;
+    font-family: SummaryNotes;
     font-size: 18px;
     margin: 0 0 10px 0;
     word-wrap: break-word;
@@ -137,7 +137,7 @@ textarea:hover:not(:focus){
     border: 2px solid #000;
     border-radius: 10px;
     padding: 5px 15px;
-    font-family: summary notes;
+    font-family: SummaryNotes;
     font-size: 14px;
     cursor: pointer;
     float: right;
@@ -152,7 +152,7 @@ textarea:hover:not(:focus){
     border: 3px solid #000;
     border-radius: 15px;
     padding: 10px 30px;
-    font-family:summary notes;
+    font-family: 'SummaryNotes';
     font-size: 20px;
     cursor: pointer;
     margin-top: 10px;
@@ -160,4 +160,13 @@ textarea:hover:not(:focus){
 
 #btn-back:hover {
     background: #e0e0e0;
+}
+@font-face {
+    font-family: 'SummaryNotes';
+    src: url('fonts/SummaryNotesRegular-Ea5ln.ttf') format('truetype'); ;
+    font-weight: normal;
+    font-style: normal;
+}
+body, button, textarea, h2, p, .menu, .note-card {
+    font-family: 'SummaryNotes' ;
 }
